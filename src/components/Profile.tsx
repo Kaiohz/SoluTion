@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 
 const Profile: React.FC = () => {
   const [profile, setProfile] = useState({
-    name: '',
-    email: '',
     skills: '',
     experiences: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setProfile({
       ...profile,
@@ -30,32 +28,6 @@ const Profile: React.FC = () => {
       </div>
       <form className="mt-12" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-            <div className="mt-1">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                value={profile.name}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-            <div className="mt-1">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                value={profile.email}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
           <div className="sm:col-span-2">
             <label htmlFor="skills" className="block text-sm font-medium text-gray-700">Skills</label>
             <div className="mt-1">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, User, Mail, FileText } from 'lucide-react';
+import { Home, User, Mail, FileText, Newspaper, Edit } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
@@ -18,6 +18,12 @@ const Header: React.FC = () => {
             </a>
             <a href="/mail" className="text-gray-900 hover:text-gray-700">
               <Mail className="inline-block mr-1" /> Mail
+            </a>
+            <a href="/news" className="text-gray-900 hover:text-gray-700">
+              <Newspaper className="inline-block mr-1" /> News
+            </a>
+            <a href="/posts" className="text-gray-900 hover:text-gray-700">
+              <Edit className="inline-block mr-1" /> Posts
             </a>
             <a href="/" className="text-gray-900 hover:text-gray-700">
               <Home className="inline-block mr-1" /> Home
