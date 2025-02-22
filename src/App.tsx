@@ -6,12 +6,14 @@ import Billing from './components/Billing';
 import Mail from './components/Mail';
 import News from './components/News';
 import Posts from './components/Posts';
+import Home from './components/Home';
 
 const App: React.FC = () => {
   return (
     <Router>
       <Header />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/billing" element={<Billing />} />
         <Route path="/mail" element={<Mail />} />
